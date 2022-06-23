@@ -45,7 +45,7 @@ header{
 }
 
 .header-active{
-    height: 85vh;
+    height: 90vh;
 }
 
 .header-top{
@@ -61,7 +61,7 @@ header{
 }
 
 .header-top a{
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 600;
     transition: .3s;
     cursor: pointer;
@@ -135,6 +135,84 @@ section{
     background-color: var(--dark-grey);
 }
 
+/*About course*/
+
+#about-course{
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#about-course h2{
+    color: var(--whitesmoke);
+    padding-top: 20vh;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#about-course p{
+    color: var(--whitesmoke);
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 2rem;
+}
+
+.about-course-controls{
+    height: 3rem;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.controls-circles{
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.controls-circle{
+    width: 7.5vw;
+    height: 7.5vw;
+    border-radius: 50%;
+    background-color: var(--whitesmoke);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-inside{
+    background-color: black;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.about-course-controls img{
+    height: 15vw;
+    width: auto;
+    filter: invert(100);
+    transition: .5s;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.left-arrow{
+    transform: scaleX(-1);
+}
+
+.about-course-controls img:hover{
+    opacity: 1;
+}
+
+.circle-selected{
+    background-color:var(--whitesmoke) !important;
+}
+
 /*----------Responsive----------*/
 
 @media (min-width: 1000px){
@@ -163,5 +241,30 @@ section{
     .a-hidden{
         visibility: visible;
         opacity: 1;
+    }
+
+    /*About course*/
+
+    #about-course h2{
+        font-size: 3rem;
+    }
+
+    #about-course p{
+        font-size: 2rem;
+        margin: 0 5rem;
+    }
+
+    .about-course-controls img{
+        height: 6rem;
+    }
+
+    .about-course-controls{
+        width: 80vw;
+        margin-left: 10vw;
+    }
+
+    .controls-circle{
+        width: 3rem;
+        height: 3rem;
     }
 }
