@@ -8,7 +8,11 @@
     --whitesmoke: #EEEEEE;
     --black: black;
     --grey: rgb(102, 102, 102);
-    --dark-grey: rgb(54, 54, 54);
+    --dark-grey: rgb(63, 63, 63);
+}
+
+*::selection{
+    background-color: rgba(0, 0, 0, 0.15);
 }
 
 html{
@@ -41,7 +45,7 @@ header{
 }
 
 .header-active{
-    height: 95vh;
+    height: 85vh;
 }
 
 .header-top{
@@ -76,12 +80,12 @@ header{
 
 .header-img{
     position: absolute;
-    width: 7rem;
-    height: 7rem;
+    width: 6rem;
+    height: 6rem;
     border-radius: 50%;
     background-color: var(--black);
-    top: calc(100% - 7rem);
-    left: calc(50vw - 3.5rem);
+    top: calc(100% - 6.5rem);
+    left: calc(50vw - 3rem);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,7 +111,7 @@ section{
 }
 
 #introduction h1{
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
     margin: 0 2rem;
     font-weight: bolder;

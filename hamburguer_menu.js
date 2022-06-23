@@ -4,13 +4,24 @@ export function hamburguerMenu(btn, menu, a) {
     $menu = d.querySelector(menu),
     $menuA = d.querySelectorAll(a)
 
-    $btn.addEventListener("click", e => {
-
+    const changeMenu = () => {
         if(window.screen.availWidth <= 1000){
             $menu.classList.toggle("header-active")
             $menuA.forEach(el => {
                 el.classList.toggle("a-hidden")
             });
-        } else  window.scroll(0,0)
+        }
+    }
+
+    $menuA.forEach(el => {
+        el.addEventListener("click", e => {
+            changeMenu()
+        })
+    });
+
+    $btn.addEventListener("click", e => {
+
+        changeMenu()
+        if(window.screen.availWidth > 1000) window.scroll(0,0)
     })
 }
