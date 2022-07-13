@@ -261,7 +261,7 @@ section{
 .course-information-text p{
     text-align: center;
     margin: 0 2rem;
-    font-size: 1.4rem;
+    font-size: 1rem;
 }
 
 .course-information-text h2{
@@ -388,6 +388,7 @@ section{
 
     .course-information-text p{
         padding-top: 2rem;
+        font-size: 1.4rem;
     }
 
     .course-information-title{
