@@ -1,6 +1,7 @@
 import { aboutCourseCarousel, aboutCourseCarouselCellphone, carousel } from "./carousel.js"
 import { changeImg } from "./change_image.js"
 import { hamburguerMenu } from "./hamburguer_menu.js"
+import { btnLink } from "./index_course.js"
 
 
 let arrModules = [
@@ -23,4 +24,5 @@ d.addEventListener("DOMContentLoaded", e => {
     carousel(".left-arrow", ".right-arrow", "#about-us h2", "#about-us p", ["¿Quiénes somos?", "¿Qué queremos?", "¿Cómo lo harémos?"], arrAboutUs, ".circle-inside")
     aboutCourseCarousel(".module-btn", ".course-information-text h2", ".course-information-text p", ["Módulo 1", "Módulo 2", "Módulo 3", "Módulo 4", "Módulo 5"], arrModules)
     aboutCourseCarouselCellphone(".about-course-left-arrow", ".about-course-right-arrow", ".course-information-index", ".course-information-title", ".course-information-text p", ["Módulo 1", "Módulo 2", "Módulo 3", "Módulo 4", "Módulo 5"], arrModules)
+    btnLink("#introduction button", "https://kirby121.github.io/ciberseguridad/curso.html")
 })

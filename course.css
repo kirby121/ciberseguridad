@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+html{
+    background-color: whitesmoke;
+    width: 100vw;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/*Videos*/
+
+header{
+    height: 15vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    z-index: 25;
+}
+
+.header-img{
+    display: none;
+}
+
+.header-space{
+    width: 100vw;
+    height: 15vh;
+}
+
+.line{
+    position: absolute;
+    width: 80vw;
+    height: .2rem;
+    background-color: black;
+    left: 10vw;
+    top: calc(7.5vh - 0.1rem);
+}
+
+header h1{
+    background-color: whitesmoke;
+    padding: 1rem 2rem;
+    z-index: 30;
+}
+
+#video{
+    margin-left: 9.5vw;
+}
+
+.controls{
+    display: none;
+}
+
+video{
+    width: 75vw;
+}
+
+#video{
+    width: 80vw;
+    height: 48vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+    margin-top: 10vh;
+}
+
+.cellphone-text{
+    width: 80vw;
+    padding: 10vh 10vw;
+    text-align: justify;
+    font-size: 1.5rem;
+}
+
+
+
+/*--------- Responsive ---------*/
+
+
+@media (min-width: 1000px){
+
+    header{
+        height: 10vh;
+        padding-top: 2vh;
+    }
+    
+    .header-img{
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 10vw;
+        width: 12vh;
+        height: 12vh;
+        background-color: black;
+        border-radius: 50%;
+        margin-top: 2vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-img img{
+        width: 60%;
+        z-index: 26;
+    }
+    
+    .header-space{
+        height: 10vh;
+    }
+
+    .line{
+        top: calc(7vh - 0.1rem);
+    }
+    
+    header h1{
+        background-color: whitesmoke;
+        padding: 0 2rem;
+        z-index: 30;
+    }
+    
+
+    #video{
+        margin-top: 5vh;
+        width: 58vw;
+        height: 82vh;
+        margin-left: 21vw;
+    }
+
+    video{
+        width: 55vw;
+    }
+
+    .controls{
+        display: block;
+        width: 55vw;
+        display: flex;
+        justify-content: space-around;
+        height: 3rem;
+        
+    }
+
+    .volume, .return-time{
+        display: flex;
+        width: 34vw;
+        background-color: whitesmoke;
+        border: solid black 2px;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .pause{
+        width: 29vw;
+        background-color: whitesmoke;
+        border: solid black 2px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .volume p{
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
+    .return-time p{
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .return-time{
+        cursor: pointer;
+    }
+    
+    .volume-min, .volume-max{
+        font-size: 2rem !important;
+        cursor: pointer;
+    }
+    
+    .cellphone-text{
+        display: none;
+    }
+}
