@@ -3,6 +3,10 @@
     font-family: "Raleway", sans-serif;
 }
 
+*::selection{
+    background-color: transparent;
+}
+
 html{
     background-color: whitesmoke;
     width: 100vw;
@@ -11,6 +15,10 @@ html{
 }
 
 /*Videos*/
+
+.none{
+    display: none !important;
+}
 
 header{
     height: 15vh;
@@ -77,6 +85,34 @@ video{
     font-size: 1.5rem;
 }
 
+.video-start button{
+    color: whitesmoke;
+background-color: black;
+border: none;
+outline: none;
+padding: .5rem 1rem;
+font-size: 1rem;
+font-weight: 600;
+cursor: pointer;
+transition: .5s;
+border: .3rem black solid;
+}
+
+.video-start button:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.video-start{
+    width: 75vw;
+    height: 24vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 /*--------- Responsive ---------*/
@@ -131,6 +167,17 @@ video{
         margin-left: 21vw;
     }
 
+    .video-start{
+        width: 55vw;
+        height: 67vh;
+    }
+
+    .video-start button{
+    padding: .75rem 1.5rem;
+    font-size: 1.8rem;
+    border: .3rem black solid;
+    }
+
     video{
         width: 55vw;
     }
@@ -159,6 +206,20 @@ video{
         border: solid black 2px;
         justify-content: center;
         align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .pause p{
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding-right:1rem ;
+    }
+
+    .pause img{
+        height: 55%;
     }
 
     .volume p{
