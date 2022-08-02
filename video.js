@@ -5,7 +5,6 @@ export function startVideo(btn, div, video) {
     $div = d.querySelector(div),
     $video = d.querySelector(video)
     
-    $video.currentTime = 300
     $btn.addEventListener("click", e => {
         $div.classList.add("none")
         $video.play()
