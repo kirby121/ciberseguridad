@@ -5,6 +5,7 @@ export function startVideo(btn, div, video) {
     $div = d.querySelector(div),
     $video = d.querySelector(video)
     
+    $video.currentTime = 300
     $btn.addEventListener("click", e => {
         $div.classList.add("none")
         $video.play()
@@ -38,8 +39,9 @@ export function volumeBtn(moreVolume, lessVolume, video) {
     $video.volume = 0.5
 
     d.addEventListener("click", e => {
-        if(e.target === $lessVolume) $video.volume -= 0.1
-        else if(e.target === $moreVolume) $video.volume += 0.1
+        
+            if(e.target === $lessVolume && $video.volume >= 0.1) $video.volume -= 0.1
+            else if(e.target === $moreVolume && $video.volume <= 0.9) $video.volume += 0.1
     })
     
 }
@@ -53,4 +55,18 @@ export function returnTimeBtn(btn, video) {
 
 export function addControls() {
     if(window.screen.width < 1000) d.querySelector("#video video").setAttribute("controls","controls")
+}
+
+export function videoEnd(video, videoSection, videoLectureSection, lectureSection) {
+    
+    const $video = d.querySelector(video),
+    $videoSection = d.querySelector(videoSection),
+    $videoLectureSection = d.querySelector(videoLectureSection),
+    $lectureSection = d.querySelector(lectureSection)
+
+    $video.addEventListener("ended", e => {
+        $videoSection.classList.add("none")
+        $videoLectureSection.classList.add("none")
+        $lectureSection.classList.remove("none")
+    })
 }

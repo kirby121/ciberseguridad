@@ -113,6 +113,97 @@ border: .3rem black solid;
     align-items: center;
 }
 
+#reading{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10vh;
+}
+
+.reading-screen{
+    width: 64%;
+    border: solid black .5rem;
+    margin-top: 15vh;
+    padding: 8vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reading-screen h2{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-right: 5rem;
+}
+
+.reading-screen p{
+    text-align: justify;
+    font-size: 1.5rem;
+    margin-top: 5rem;
+    line-height: 2.5rem;
+}
+
+.reading-image{
+    width: 80%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 5rem;
+}
+
+.reading-image img{
+    width: 80%;
+    height: auto;
+}
+
+.reading-screen button{
+    border: solid black .3rem;
+    background-color: black;
+    color: whitesmoke;
+    cursor: pointer;
+    margin-top: 5rem;
+    padding: .5rem 3rem;
+    font-size: 2rem;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.reading-screen button:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+
+.reading-header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.speech{
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    background-color: black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: black solid .3rem;
+    transition: .5s;
+}
+
+.speech:hover{
+    background-color: rgb(56, 56, 56);
+}
+
+.speech img{
+    width: 60%;
+    filter: invert(90);
+}
+
 
 
 /*--------- Responsive ---------*/
@@ -121,7 +212,7 @@ border: .3rem black solid;
 @media (min-width: 1000px){
 
     header{
-        height: 10vh;
+        height: 14vh;
         padding-top: 2vh;
     }
     
@@ -150,13 +241,14 @@ border: .3rem black solid;
     }
 
     .line{
-        top: calc(7vh - 0.1rem);
+        top: calc(8vh - 0.1rem);
     }
     
     header h1{
         background-color: whitesmoke;
         padding: 0 2rem;
         z-index: 30;
+        margin-bottom: 2vh;
     }
     
 
