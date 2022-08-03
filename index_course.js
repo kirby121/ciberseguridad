@@ -1,4 +1,4 @@
-import { speechVoice } from "../../../Javascript/Curso/Ejercicios DOM/reading.js"
+import { speechVoice } from "./reading.js"
 import { addControls, pauseBtn, returnTimeBtn, startVideo, videoEnd, volumeBtn } from "./video.js"
 
 const d = document
