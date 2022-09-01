@@ -1,4 +1,5 @@
-const d = document
+const d = document,
+ls = localStorage
 
 export function startVideo(btn, div, video) {
     const $btn = d.querySelector(btn),
@@ -56,16 +57,49 @@ export function addControls() {
     if(window.screen.width < 1000) d.querySelector("#video video").setAttribute("controls","controls")
 }
 
-export function videoEnd(video, videoSection, videoLectureSection, lectureSection) {
+export function videoEnd(video, videoSection, videoLectureSection, lectureSection, lecturesArr) {
+
+    if(ls.getItem("lectureNumber") === null){
+        ls.setItem("lectureNumber", 0)
+    }
     
     const $video = d.querySelector(video),
     $videoSection = d.querySelector(videoSection),
     $videoLectureSection = d.querySelector(videoLectureSection),
-    $lectureSection = d.querySelector(lectureSection)
+    $lectureSection = d.querySelector(lectureSection),
+    $lectureSectionText = d.querySelector(`.contentuwu`)
 
     $video.addEventListener("ended", e => {
         $videoSection.classList.add("none")
         $videoLectureSection.classList.add("none")
         $lectureSection.classList.remove("none")
+        let num = ls.getItem("lectureNumber")
+        num++
+        ls.setItem("lectureNumber", num)
+        $lectureSectionText.innerHTML = lecturesArr[num-1]
+    })
+}
+
+export function changeVid (btn, video, videoArr, videoSection, videoLectureSection, lectureSection) {
+    if(ls.getItem("number") === null){
+        ls.setItem("number", 0)
+    }
+
+    const $btn = d.querySelector(btn),
+    $video = d.querySelector(video),
+    $videoSection = d.querySelector(videoSection),
+    $videoLectureSection = d.querySelector(videoLectureSection),
+    $lectureSection = d.querySelector(lectureSection)
+
+    $btn.addEventListener("click", e => {
+        let num = ls.getItem("number")
+        num++
+        ls.setItem("number", num)
+        $video.setAttribute("src", videoArr[num])
+        $videoSection.classList.remove("none")
+        $videoLectureSection.classList.add("none")
+        $lectureSection.classList.add("none")
+
+        $video.play()
     })
 }
