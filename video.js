@@ -93,13 +93,15 @@ export function changeVid (btn, video, videoArr, videoSection, videoLectureSecti
 
     $btn.addEventListener("click", e => {
         let num = ls.getItem("number")
-        num++
-        ls.setItem("number", num)
-        $video.setAttribute("src", videoArr[num])
-        $videoSection.classList.remove("none")
-        $videoLectureSection.classList.add("none")
-        $lectureSection.classList.add("none")
-
-        $video.play()
+        if(ls.getItem("number") !== "5"){
+            num++
+            ls.setItem("number", num)
+            $video.setAttribute("src", videoArr[num])
+            $videoSection.classList.remove("none")
+            $videoLectureSection.classList.add("none")
+            $lectureSection.classList.add("none")
+            
+            $video.play()
+        }
     })
 }

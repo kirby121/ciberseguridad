@@ -25,4 +25,5 @@ d.addEventListener("DOMContentLoaded", e => {
     aboutCourseCarousel(".module-btn", ".course-information-text h2", ".course-information-text p", ["Módulo 1", "Módulo 2", "Módulo 3", "Módulo 4", "Módulo 5"], arrModules)
     aboutCourseCarouselCellphone(".about-course-left-arrow", ".about-course-right-arrow", ".course-information-index", ".course-information-title", ".course-information-text p", ["Módulo 1", "Módulo 2", "Módulo 3", "Módulo 4", "Módulo 5"], arrModules)
     btnLink("#introduction button", "https://kirby121.github.io/ciberseguridad/curso.html")
+    console.log("Gracias por acceder a nuestro curso");
 })
